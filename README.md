@@ -14,15 +14,9 @@ Available below are subnetworks associated with the Beta Cell Transcriptome netw
 2. Cytoscape network files (.cyjs) with all genes
 3. Cytoscape network files (.cyjs) with only transcription factors
 
-### Test links
-[view/1/index.html](view/1/index.html)
-
-[/view/1/index.html](/view/1/index.html)
-
-[/bct-network/view/1/index.html](/bct-network/view/1/index.html)
-
-
 ### 1. Interactive subnetworks
+
+Click on the following links to view the subnetworks in your browser. If you want to further interact with the network, we recommend you download the appropriate files below and open them in a desktop version of Cytoscape.
 
 | Metamodule | Highest | High | Low | Any |
 | --- | --- |  --- |  --- |  --- |
@@ -32,6 +26,8 @@ Available below are subnetworks associated with the Beta Cell Transcriptome netw
 
 ### 2. Cytoscape network files - all genes
 
+Click on the following links to download the subnetwork files to your desktop. 
+
 | Metamodule | Highest | High | Low | Any |
 | --- | --- |  --- |  --- |  --- |
 | A | [download](cyjs/metamodule-A_filterlevel-highest.zip) | [download](cyjs/metamodule-A_filterlevel-high.zip) | [download](cyjs/metamodule-A_filterlevel-low.zip) | [download](cyjs/metamodule-A_filterlevel-any.zip) |
@@ -39,13 +35,27 @@ Available below are subnetworks associated with the Beta Cell Transcriptome netw
 | Etc | Etc |  Etc| Etc | Etc |
 
 ### 3. Cytoscape network files - transcription factors
+
+Click on the following links to download the subnetwork files to your desktop. 
+
 | Metamodule | Highest | High | Low | Any |
 | --- | --- |  --- |  --- |  --- |
 | A | [download](cyjs/metamodule-A_filterlevel-highest_tfOnly.zip) | [download](cyjs/metamodule-A_filterlevel-high_tfOnly.zip) | [download](cyjs/metamodule-A_filterlevel-low_tfOnly.zip) | [download](cyjs/metamodule-A_filterlevel-any_tfOnly.zip) |
 | B | [download](cyjs/metamodule-B_filterlevel-highest_tfOnly.zip) | [download](cyjs/metamodule-B_filterlevel-high_tfOnly.zip) | [download](cyjs/metamodule-B_filterlevel-low_tfOnly.zip) | [download](cyjs/metamodule-B_filterlevel-any_tfOnly.zip) |
 | Etc | Etc |  Etc| Etc | Etc |
 
+## FAQs
 
-## Support or Contact
+### How do I load network files in Cytoscape?
+> In order to load a network from a local file you can select File → Import → Network → File... Choose the correct file in the file chooser dialog and press Open. After you choose a network file, another dialog will pop up. Here, you can choose either to create a new network collection for the new network, or load the new network into an existing network collection. When you choose the latter, make sure to choose the right mapping column to map the new network to the existing network collection.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Where can I get Cytoscape?
+> You can download it [here](http://www.cytoscape.org/).
+
+
+
+
+
+## Contact
+
+If you have questions, please contact the corresponding author of the manuscript.
