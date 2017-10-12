@@ -14,6 +14,14 @@ Available below are subnetworks associated with the Beta Cell Transcriptome netw
 2. Cytoscape network files (.cyjs) with all genes
 3. Cytoscape network files (.cyjs) with only transcription factors
 
+### Test links
+[view/1/index.html](view/1/index.html)
+
+[/view/1/index.html](/view/1/index.html)
+
+[/bct-network/view/1/index.html](/bct-network/view/1/index.html)
+
+
 ### 1. Interactive subnetworks
 
 | Metamodule | Highest | High | Low | Any |
