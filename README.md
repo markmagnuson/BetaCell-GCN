@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+# Beta Cell Transcriptome Network
 
-You can use the [editor on GitHub](https://github.com/c5creative/bct-network/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+This page is associated with the following publication - please cite accordingly:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+> author 1, author, author3, title... link to pubmed, etc...
 
-```markdown
-Syntax highlighted code block
+## Network Files
 
-# Header 1
-## Header 2
-### Header 3
+Available below are subnetworks associated with the Beta Cell Transcriptome network. They come in three flavors:
 
-- Bulleted
-- List
+1. Interactive subnetworks
+2. Cytoscape network files (.cyjs) with all genes
+3. Cytoscape network files (.cyjs) with only transcription factors
 
-1. Numbered
-2. List
+### 1. Interactive subnetworks
 
-**Bold** and _Italic_ and `Code` text
+| Metamodule | Highest | High | Low | Any |
+| --- | --- |  --- |  --- |  --- |
+| A | [view](view/1/index.html) | [view](view/1/index.html) | [view](view/1/index.html) | [view](view/1/index.html) |
+| B | [view](view/1/index.html) | [view](view/1/index.html) | [view](view/1/index.html) | [view](view/1/index.html) |
+| Etc | Etc |  Etc| Etc | Etc |
 
-[Link](url) and ![Image](src)
-```
+### 2. Cytoscape network files - all genes
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+| Metamodule | Highest | High | Low | Any |
+| --- | --- |  --- |  --- |  --- |
+| A | [download](cyjs/metamodule-A_filterlevel-highest.zip) | [download](cyjs/metamodule-A_filterlevel-high.zip) | [download](cyjs/metamodule-A_filterlevel-low.zip) | [download](cyjs/metamodule-A_filterlevel-any.zip) |
+| B | [download](cyjs/metamodule-B_filterlevel-highest.zip) | [download](cyjs/metamodule-B_filterlevel-high.zip) | [download](cyjs/metamodule-B_filterlevel-low.zip) | [download](cyjs/metamodule-B_filterlevel-any.zip) |
+| Etc | Etc |  Etc| Etc | Etc |
 
-### Jekyll Themes
+### 3. Cytoscape network files - transcription factors
+| Metamodule | Highest | High | Low | Any |
+| --- | --- |  --- |  --- |  --- |
+| A | [download](cyjs/metamodule-A_filterlevel-highest_tfOnly.zip) | [download](cyjs/metamodule-A_filterlevel-high_tfOnly.zip) | [download](cyjs/metamodule-A_filterlevel-low_tfOnly.zip) | [download](cyjs/metamodule-A_filterlevel-any_tfOnly.zip) |
+| B | [download](cyjs/metamodule-B_filterlevel-highest_tfOnly.zip) | [download](cyjs/metamodule-B_filterlevel-high_tfOnly.zip) | [download](cyjs/metamodule-B_filterlevel-low_tfOnly.zip) | [download](cyjs/metamodule-B_filterlevel-any_tfOnly.zip) |
+| Etc | Etc |  Etc| Etc | Etc |
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/c5creative/bct-network/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+## Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
