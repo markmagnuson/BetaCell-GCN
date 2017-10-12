@@ -26,16 +26,10 @@ Click on the following links to view the subnetworks in your browser. If you wan
 
 Click on the following links to download the subnetwork files to your desktop. 
 
-Test links for LFS-managed files (as per https://github.com/git-lfs/git-lfs/issues/1342)
-
-Copied from github: https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-any.zip
-
-
-
 | Metamodule | Highest | High | Low | Any |
 | --- | --- |  --- |  --- |  --- |
-| A | [download](cyjs/metamodule-A_filterlevel-highest.zip) | [download](cyjs/metamodule-A_filterlevel-high.zip) | [download](cyjs/metamodule-A_filterlevel-low.zip) | [download](cyjs/metamodule-A_filterlevel-any.zip) |
-| B | [download](cyjs/metamodule-B_filterlevel-highest.zip) | [download](cyjs/metamodule-B_filterlevel-high.zip) | [download](cyjs/metamodule-B_filterlevel-low.zip) | [download](cyjs/metamodule-B_filterlevel-any.zip) |
+| A | [download](https://github.com/c5creative/bct-network/raw/master/https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-highest.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-high.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-low.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-any.zip) |
+| B | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-highest.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-high.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-low.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-any.zip) |
 | Etc | Etc |  Etc| Etc | Etc |
 
 ### 3. Cytoscape network files - transcription factors
@@ -44,8 +38,8 @@ Click on the following links to download the subnetwork files to your desktop.
 
 | Metamodule | Highest | High | Low | Any |
 | --- | --- |  --- |  --- |  --- |
-| A | [download](cyjs/metamodule-A_filterlevel-highest_tfOnly.zip) | [download](cyjs/metamodule-A_filterlevel-high_tfOnly.zip) | [download](cyjs/metamodule-A_filterlevel-low_tfOnly.zip) | [download](cyjs/metamodule-A_filterlevel-any_tfOnly.zip) |
-| B | [download](cyjs/metamodule-B_filterlevel-highest_tfOnly.zip) | [download](cyjs/metamodule-B_filterlevel-high_tfOnly.zip) | [download](cyjs/metamodule-B_filterlevel-low_tfOnly.zip) | [download](cyjs/metamodule-B_filterlevel-any_tfOnly.zip) |
+| A | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-highest_tfOnly.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-high_tfOnly.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-low_tfOnly.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-any_tfOnly.zip) |
+| B | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-highest_tfOnly.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-high_tfOnly.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-low_tfOnly.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-any_tfOnly.zip) |
 | Etc | Etc |  Etc| Etc | Etc |
 
 ## FAQs
