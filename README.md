@@ -1,7 +1,5 @@
 # Beta Cell Transcriptome Network
 
-
-
 This page is associated with the following publication - please cite accordingly:
 
 > author 1, author, author3, title... link to pubmed, etc...
@@ -27,6 +25,12 @@ Click on the following links to view the subnetworks in your browser. If you wan
 ### 2. Cytoscape network files - all genes
 
 Click on the following links to download the subnetwork files to your desktop. 
+
+Test links for LFS-managed files (as per https://github.com/git-lfs/git-lfs/issues/1342)
+
+Copied from github: https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-any.zip
+
+
 
 | Metamodule | Highest | High | Low | Any |
 | --- | --- |  --- |  --- |  --- |
