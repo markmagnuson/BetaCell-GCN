@@ -9,9 +9,10 @@ This page is associated with the following publication - please cite accordingly
 We have prepared Cytoscape session files that you can download and simply open with [Cytoscape](http://www.cytoscape.org) to view and interact 
 with the network meta-modules.
 
-* Option 1 - [Download Cytoscape session file](https://github.com/c5creative/bct-network/raw/master/BCDL-GCN-all-genes.cys) for all genes
-* Option 2 - [Download Cytoscape session file](https://github.com/c5creative/bct-network/raw/master/BCDL-GCN-transcription-factors.cys) for genes filtered via **transcription factor activity, sequence-specific DNA binding** ([GO:0003700](http://www.informatics.jax.org/vocab/gene_ontology/GO:0003700))
-
+<ul>
+  <li>Option 1 - <a class="button" href="https://github.com/c5creative/bct-network/raw/master/BCDL-GCN-all-genes.cys">Download Cytoscape file for all genes</a></li>
+  <li>Option 2 - <a class="button" href="https://github.com/c5creative/bct-network/raw/master/BCDL-GCN-transcription-factors.cys">Download Cytoscape file for "TF" genes</a>, filtered via <em>transcription factor activity, sequence-specific DNA binding</em> (<a href="http://www.informatics.jax.org/vocab/gene_ontology/GO:0003700">GO:0003700</a>)</li>
+</ul>
 Once you have downloaded the file, open it with Cytoscape and click on the metamodule you would like to view. You can then
 explore the network via Cytoscape's functionality.
 
