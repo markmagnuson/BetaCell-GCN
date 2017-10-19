@@ -1,6 +1,6 @@
 This page is associated with the following publication - please cite accordingly:
 
-> author 1, author, author3, title... link to pubmed, etc...
+> Manuscript in preparation or in review
 
 ## Exploring the network
 
