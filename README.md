@@ -6,39 +6,15 @@ This page is associated with the following publication - please cite accordingly
 
 Available below are subnetworks associated with the Beta Cell Transcriptome network. They come in three flavors:
 
-1. Interactive subnetworks
-2. Cytoscape network files (.cyjs) with all genes
-3. Cytoscape network files (.cyjs) with only transcription factors
+1. Interactive subnetworks - view directly in your web browser
+2. Cytoscape network files (.cyjs) with all genes - import into and view with Cytoscape
+3. Cytoscape network files (.cyjs) with only transcription factors - import into and view with Cytoscape
 
-### 1. Interactive subnetworks
-
-Click on the following links to view the subnetworks in your browser. If you want to further interact with the network, we recommend you download the appropriate files below and open them in a desktop version of Cytoscape.
-
-| Metamodule | Highest | High | Low | Any |
-| --- | --- |  --- |  --- |  --- |
-| A | [view](view/1/index.html) | [view](view/1/index.html) | [view](view/1/index.html) | [view](view/1/index.html) |
-| B | [view](view/1/index.html) | [view](view/1/index.html) | [view](view/1/index.html) | [view](view/1/index.html) |
-| Etc | Etc |  Etc| Etc | Etc |
-
-### 2. Cytoscape network files - all genes
-
-Click on the following links to download the subnetwork files to your desktop. 
-
-| Metamodule | Highest | High | Low | Any |
-| --- | --- |  --- |  --- |  --- |
-| A | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-highest.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-high.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-low.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-any.zip) |
-| B | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-highest.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-high.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-low.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-any.zip) |
-| Etc | Etc |  Etc| Etc | Etc |
-
-### 3. Cytoscape network files - transcription factors
-
-Click on the following links to download the subnetwork files to your desktop. 
-
-| Metamodule | Highest | High | Low | Any |
-| --- | --- |  --- |  --- |  --- |
-| A | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-highest_tfOnly.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-high_tfOnly.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-low_tfOnly.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-any_tfOnly.zip) |
-| B | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-highest_tfOnly.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-high_tfOnly.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-low_tfOnly.zip) | [download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-any_tfOnly.zip) |
-| Etc | Etc |  Etc| Etc | Etc |
+| Metamodule | All Genes (view) | All Gene (download) | Transcription Factors (download) | 
+| --- | --- |  --- |  ---  |
+| A | [View](view/1/index.html) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-any_tfOnly.zip) 
+| B | [View](view/1/index.html) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-any_tfOnly.zip) 
+| C | Etc |  Etc| Etc 
 
 ## FAQs
 
