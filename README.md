@@ -12,19 +12,17 @@ Each node in the meta-network represents a module of highly co-expressed genes. 
 
 ## Exploring the gene network
 
-### The Easy Way
+### For Biologists
 
-We have prepared Cytoscape session files that you can download and simply open with [Cytoscape](http://www.cytoscape.org) to view and interact 
-with the network meta-modules.
+We have prepared Cytoscape *session* files that you can download and simply open with [Cytoscape](http://www.cytoscape.org) to view and interact with the network meta-modules.
 
 <ul>
   <li>Option 1 - <a class="button" href="https://github.com/c5creative/bct-network/raw/master/BCDL-GCN-all-genes.cys">Download Cytoscape file for all genes</a></li>
   <li>Option 2 - <a class="button" href="https://github.com/c5creative/bct-network/raw/master/BCDL-GCN-transcription-factors.cys">Download Cytoscape file for "TF" genes</a>, filtered via <em>transcription factor activity, sequence-specific DNA binding</em> (<a href="http://www.informatics.jax.org/vocab/gene_ontology/GO:0003700">GO:0003700</a>)</li>
 </ul>
-Once you have downloaded the file, open it with Cytoscape and click on the metamodule you would like to view. You can then
-explore the network via Cytoscape's functionality.
+Once you have downloaded the file, open it with Cytoscape and click on the metamodule of interested in the left sidepanel to load and view it. You can then explore the network via Cytoscape's functionality.
 
-### The Advanced Way
+### For Bioinformaticians
 
 For each metamodule, you will find below:
 * Network image for "all genes" metamodules
