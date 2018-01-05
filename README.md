@@ -2,7 +2,7 @@ This page is associated with the following publication - please cite accordingly
 
 > Manuscript in preparation or in review
 
-## Exploring the (meta)module network
+## Exploring the meta-module network
 ![Meta-modules](images/metanetwork.png)
 
 Each node in the meta-network represents a module of highly co-expressed genes.  The meta-network is defined by correlations between module eigengenes and partitions modules into three distinct strongly connected module groups. See figure 1 in the manuscript for additional detail.
