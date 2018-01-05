@@ -3,7 +3,7 @@ This page is associated with the following publication - please cite accordingly
 > Manuscript in preparation or in review
 
 ## Exploring the (meta)module network
-![Metamodule A](images/metanetwork.png)
+![Meta-modules](images/metanetwork.png)
 
 Each node in the meta-network represents a module of highly co-expressed genes.  The meta-network is defined by correlations between module eigengenes and partitions modules into three distinct strongly connected module groups. See figure 1 in the manuscript for additional detail.
 
@@ -20,30 +20,30 @@ We have prepared Cytoscape *session* files that you can download and simply open
   <li>Option 1 - <a class="button" href="https://github.com/c5creative/bct-network/raw/master/BCDL-GCN-all-genes.cys">Download Cytoscape file for all genes</a></li>
   <li>Option 2 - <a class="button" href="https://github.com/c5creative/bct-network/raw/master/BCDL-GCN-transcription-factors.cys">Download Cytoscape file for "TF" genes</a>, filtered via <em>transcription factor activity, sequence-specific DNA binding</em> (<a href="http://www.informatics.jax.org/vocab/gene_ontology/GO:0003700">GO:0003700</a>)</li>
 </ul>
-Once you have downloaded the file, open it with Cytoscape and click on the metamodule of interested in the left sidepanel to load and view it. You can then explore the network via Cytoscape's functionality.
+Once you have downloaded the file, open it with Cytoscape and click on the meta-module of interest in the left sidepanel to load and view it. You can then explore the network via Cytoscape's functionality.
 
 ### For Bioinformaticians
 
-For each metamodule, you will find below:
-* Network image for "all genes" metamodules
-* Statistics about number of nodes and edges for "all genes" metamodules
+For each meta-module, you will find below:
+* Network image for "all genes" meta-modules
+* Statistics about number of nodes and edges for "all genes" meta-modules
 * Cytoscape JSON network file (compressed via ZIP) for all genes
 * Cytoscape JSON network file (compressed via ZIP) for all genes filtered via **transcription factor activity, sequence-specific DNA binding** ([GO:0003700](http://www.informatics.jax.org/vocab/gene_ontology/GO:0003700))
   
 
-| Metamodule | Image | # nodes(1) | # of edges(2) | All Genes | Transcription Factors Activity Genes | 
+| Meta-module | Image | # nodes(1) | # of edges(2) | All Genes | Transcription Factors Activity Genes | 
 | --- | --- | --- |  --- |  ---  | ---  |
-| A | [![Metamodule A](images/metamodule-A_crop_resize.jpg)](images/metamodule-A.png) | 103 | 732 |         [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-any_tfOnly.zip) |
-| B | [![Metamodule B](images/metamodule-B_crop_resize.jpg)](images/metamodule-B.png) | 1,039| 64,306|      [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-any_tfOnly.zip) | 
-| C | [![Metamodule C](images/metamodule-C_crop_resize.jpg)](images/metamodule-C.png) | 3,070 | 546,028 |   [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-C_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-C_filterlevel-any_tfOnly.zip) | 
-| D | [![Metamodule D](images/metamodule-D_crop_resize.jpg)](images/metamodule-D.png) | 1,096 | 65,970 |    [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-D_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-D_filterlevel-any_tfOnly.zip) | 
-| E | [![Metamodule E](images/metamodule-E_crop_resize.jpg)](images/metamodule-E.png) | 30 | 56 |           [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-E_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-E_filterlevel-any_tfOnly.zip) | 
-| F | [![Metamodule F](images/metamodule-F_crop_resize.jpg)](images/metamodule-F.png) | 869 | 42,414 |      [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-F_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-F_filterlevel-any_tfOnly.zip) | 
-| G | [![Metamodule G](images/metamodule-G_crop_resize.jpg)](images/metamodule-G.png) | 54 | 177 |          [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-G_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-G_filterlevel-any_tfOnly.zip) | 
-| H | [![Metamodule H](images/metamodule-H_crop_resize.jpg)](images/metamodule-H.png) | 226 | 2,927 |       [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-H_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-H_filterlevel-any_tfOnly.zip) | 
-| I | [![Metamodule I](images/metamodule-I_crop_resize.jpg)](images/metamodule-I.png) | 246 | 3,549 |       [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-I_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-I_filterlevel-any_tfOnly.zip) | 
-| J | [![Metamodule J](images/metamodule-J_crop_resize.jpg)](images/metamodule-J.png) | 1,078 | 62,768 |    [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-J_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-J_filterlevel-any_tfOnly.zip) | 
-| K | [![Metamodule K](images/metamodule-K_crop_resize.jpg)](images/metamodule-K.png) | 42 | 145 |          [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-K_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-K_filterlevel-any_tfOnly.zip) | 
+| A | [![Meta-module A](images/metamodule-A_crop_resize.jpg)](images/metamodule-A.png) | 103 | 732 |         [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-A_filterlevel-any_tfOnly.zip) |
+| B | [![Meta-module B](images/metamodule-B_crop_resize.jpg)](images/metamodule-B.png) | 1,039| 64,306|      [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-B_filterlevel-any_tfOnly.zip) | 
+| C | [![Meta-module C](images/metamodule-C_crop_resize.jpg)](images/metamodule-C.png) | 3,070 | 546,028 |   [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-C_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-C_filterlevel-any_tfOnly.zip) | 
+| D | [![Meta-module D](images/metamodule-D_crop_resize.jpg)](images/metamodule-D.png) | 1,096 | 65,970 |    [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-D_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-D_filterlevel-any_tfOnly.zip) | 
+| E | [![Meta-module E](images/metamodule-E_crop_resize.jpg)](images/metamodule-E.png) | 30 | 56 |           [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-E_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-E_filterlevel-any_tfOnly.zip) | 
+| F | [![Meta-module F](images/metamodule-F_crop_resize.jpg)](images/metamodule-F.png) | 869 | 42,414 |      [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-F_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-F_filterlevel-any_tfOnly.zip) | 
+| G | [![Meta-module G](images/metamodule-G_crop_resize.jpg)](images/metamodule-G.png) | 54 | 177 |          [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-G_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-G_filterlevel-any_tfOnly.zip) | 
+| H | [![Meta-module H](images/metamodule-H_crop_resize.jpg)](images/metamodule-H.png) | 226 | 2,927 |       [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-H_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-H_filterlevel-any_tfOnly.zip) | 
+| I | [![Meta-module I](images/metamodule-I_crop_resize.jpg)](images/metamodule-I.png) | 246 | 3,549 |       [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-I_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-I_filterlevel-any_tfOnly.zip) | 
+| J | [![Meta-module J](images/metamodule-J_crop_resize.jpg)](images/metamodule-J.png) | 1,078 | 62,768 |    [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-J_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-J_filterlevel-any_tfOnly.zip) | 
+| K | [![Meta-module K](images/metamodule-K_crop_resize.jpg)](images/metamodule-K.png) | 42 | 145 |          [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-K_filterlevel-any.zip) | [Download](https://github.com/c5creative/bct-network/raw/master/cyjs/metamodule-K_filterlevel-any_tfOnly.zip) | 
 
 1. A node represents a gene.
 2. An edge represents a connection between two nodes and the number of edges shown is representative of edges with correlations of greater than 0.5.
