@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>A developmental gene co-expression network of mouse pancreatic beta cells (BCDL-GCN Explorer - Mark Magnuson Lab)</title>
+    <meta name="description" content="Explore gene expression profiles of a mouse developmental gene co-expression network of pancreatic beta cells"/>
+    <meta name="keywords" content="Pancreas, pancreatic, beta cells, co-expression network, genes, expression, explore, data, RNA-Seq, modules, meta-modules, iterativeWGCNA, WGCNA, Mark Magnuson">
+    <meta name="author" content="Jean-Philippe Cartailler">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- DATATABLES -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/jq-3.3.1/dt-1.10.21/b-1.6.3/b-colvis-1.6.3/fc-3.3.1/fh-3.1.7/kt-2.5.2/r-2.2.5/rg-1.1.2/sc-2.0.2/sb-1.0.0/sp-1.1.1/sl-1.3.1/datatables.css"/>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedcolumns/3.3.1/css/fixedColumns.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"/>
+
+    <style>
+        /* LAYOUT */
+        /* Custom navbar */
+        .navbar {
+            margin-left:-15px;
+            margin-right:-15px;
+            border-radius: 0;
+            border:0;
+        }
+        .navbar-brand ,.navbar-nav>li>a {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .navbar-brand{
+            padding-left:45px;
+            color:#fff !important;
+        }
+        .navbar-right{
+            padding-right: 35px !important;
+        }
+        .navbar-nav>.active>a {
+            opacity:.8;
+        }
+        .navbar-nav>.active{
+            border-bottom:5px solid #3498db;
+        }
+
+        /* DATATABLE */
+        th { font-size: 12px !important; }
+        td { font-size: 11px !important; }
+
+        td:first-child {  font-weight:bold;}
+        /*td:nth-child(2) { background-color: #d5dbdb; border:1px solid #e5e8e8  !important;}*/
+
+        #classifiers th[colspan] {
+            text-align: center;
+        }
+
+        /* Prevent bootstrap from taking over sparkline tooltip */
+        .jqstooltip {
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+
+        /* float visibility button to far left */
+        div.dt-buttons {
+            position: relative;
+            float: left;
+            padding-right:10px;
+        }
+
+        /* SPINNER */
+        @keyframes spinner {
+            to {transform: rotate(360deg);}
+        }
+
+        .spinner:before {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
+            margin-left: -10px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            border-top-color: #333;
+            animation: spinner .6s linear infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <div class="navbar navbar-default navbar-inverse">
+        <div class="navbar-header">
+            <span class="navbar-brand">BCDL-GCN Explorer</span>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="./index.html"> Gene Membership & expression</a></li>
+            <li class="active"><a href="./"> Module Statistics</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://markmagnuson.github.io/BCDL-GCN/"><i class="fas fa-external-link-alt"></i> </i>Download module network graphs</a></li>
+            <li><a href="https://github.com/cstoeckert/iterativeWGCNA"> <i class="fab fa-github"></i> iterativeWGCNA</a></li>
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="well" style="background: #fff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>A developmental lineage-based gene co-expression network for mouse pancreatic beta-cells</p>
+                            <img src="data/pancreas-developmental-network-Osipovich.png" alt="Mouse Pancreas Developmental Network - Osipovich et al" class="pull-right img-responsive">
+                        </div>
+
+                        <div class="col-sm-6">
+                            <p>Results from iterative refined WGCNA network analysis. The file includes 2 tables in separate tabs. 1) Gene Membership: full listing of the 15,949 expressed genes in the dataset and their module/meta-module membership. This table provides gene names, select gene functional classification annotation (T2D associated expression change, transcription factor, signaling molecule or lincRNA), gene population specific expression, gene meta-module and module assignment in the network, eigengene connectivity (kMe), gene expression profile, and gene expression values in each sample (normalized counts). 2) Modules: details on the 91 module detected by our analysis, including module size, module-density, and module eigengenes.  </p>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="table table-striped table-bordered table-condensed" style="width:100%" id="expression">
+                    <thead>
+                    <tr id="classifiers" style="background: #eceff1 ">
+                        <th colspan="5">Module Assignment</th>
+                        <th colspan="2" style="background: #3498db;">Endoderm</th>
+                        <th colspan="2" style="background-image: linear-gradient(to right, #1565c0 , #673ab7); color:#fff;">Pancreatic Endoderm</th>
+                        <th colspan="1" style="background: #000; color:#fff;">Pancreatic MPCs</th>
+                        <th colspan="4" style="background-image: linear-gradient(to right, #ffee58, #ff9800 );">Endocrine</th>
+                        <th colspan="2" style="background-image: linear-gradient(to right, #ff9800, #d32f2f); color:#fff;">Beta cells</th>
+                    </tr>
+                    <tr>
+                        <th>Metamodule</th>
+                        <th>Module</th>
+                        <th>Module_iWGCNA</th>
+                        <th># Genes</th>
+                        <th>Eigengene Profile</th>
+                        <th>Sox17_E8_0</th>
+                        <th>Sox17_E8_5</th>
+                        <th>Sox17_Epcam_E9_5</th>
+                        <th>Pdx1_E9_5</th>
+                        <th>Ptf1a_E10_5</th>
+                        <th>Neurog3_E15_5</th>
+                        <th>Neurog3_E15_5</th>
+                        <th>Insm1_E15_5</th>
+                        <th>Insm1_E15_5</th>
+                        <th>Ins_E16_5</th>
+                        <th>Ins_P60</th>
+                    </tr>
+                    </thead>
+
+                    <tfoot>
+                        <tr>
+                            <th>Metamodule</th>
+                            <th>Module</th>
+                            <th>Module_iWGCNA</th>
+                            <th># Genes</th>
+                            <th>Eigengene Profile</th>
+                            <th>Sox17_E8_0</th>
+                            <th>Sox17_E8_5</th>
+                            <th>Sox17_Epcam_E9_5</th>
+                            <th>Pdx1_E9_5</th>
+                            <th>Ptf1a_E10_5</th>
+                            <th>Neurog3_E15_5</th>
+                            <th>Neurog3_E15_5</th>
+                            <th>Insm1_E15_5</th>
+                            <th>Insm1_E15_5</th>
+                            <th>Ins_E16_5</th>
+                            <th>Ins_P60</th>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <hr>
+                <small>
+                    <h5>Legend</h5>
+                    <ul>
+                        <li>The data columns are averaged from the original eigengene values, per sample (N=3 per sample).</li>
+                        <!--<li>Module: UNCLASSIFIED is indicated as "-"</li>
+                        <li>Meta-Module: UNCLASSIFIED is indicated as "-"</li>-->
+                    </ul>
+                </small>
+            </div>
+        </div>
+    </div>
+
+</div> <!-- /container full -->
+
+</body>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/jq-3.3.1/dt-1.10.21/b-1.6.3/b-colvis-1.6.3/fc-3.3.1/fh-3.1.7/kt-2.5.2/r-2.2.5/rg-1.1.2/sc-2.0.2/sb-1.0.0/sp-1.1.1/sl-1.3.1/datatables.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script  type="text/javascript"src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script  type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.js" crossorigin="anonymous"></script>
+
+<script  type="text/javascript"src="inc/heatmap.js"></script>
+
+<script>
+    $(document).ready( function () {
+
+        // Setup - add a text input to each footer cell
+        $('#expression tfoot th').each( function (i) {
+            var title = $('#expression tfoot th').eq( $(this).index() ).text();
+            //console.log($(this).index());
+            $(this).html( '<input type="text" placeholder="Search" data-index="'+i+'" />' );
+        } );
+
+        var table = $('#expression').DataTable( {
+            destroy: true,
+            "ajax": {
+                "url": "data/modules_means.json",
+                "dataSrc": ""
+            },
+            'processing': true,
+            'language': {
+                'loadingRecords': '<h3><i class="fas fa-spin fa-circle-notch"></i> Loading data...</h3>'
+            },
+            "bSortClasses": true,
+            "columns": [
+                { "data": "Metamodule" },
+                { "data": "Module" },
+                { "data": "Module_iWGCNA" },
+                { "data": "# Genes"},
+                { "data": "Eigengene Profile"},
+                { "data": "Sox17_E8_0" },
+                { "data": "Sox17_E8_5" },
+                { "data": "Sox17_Epcam_E9_5" },
+                { "data": "Pdx1_E9_5" },
+                { "data": "Ptf1a_E10_5" },
+                { "data": "Neurog3_E15_5" },
+                { "data": "Neurog3_E15_5" },
+                { "data": "Insm1_E15_5" },
+                { "data": "Insm1_E15_5" },
+                { "data": "Ins_E16_5" },
+                { "data": "Ins_P60" }
+            ],
+            scrollX:        true,
+            fixedColumns: {  leftColumns: 1 },
+            lengthMenu: [[10, 20, 50], [10, 20, 50]],
+            autoWidth: false,
+            //dom: 'Blfrtip', // https://datatables.net/examples/basic_init/dom.html
+            dom: '<"top"Blf>rt<"bottom"ip><"clear">',
+            buttons: [
+                'colvis'
+            ],
+            // sparklines
+            "drawCallback": (oSettings) => {
+                // console.log('callback');
+                //console.log($('.sparkline:not(:has(canvas))'))
+                $('.sparkline:not(:has(canvas))').sparkline('html', {
+                    type: 'bar',
+                    barWidth: 8,
+                    barSpacing: 2,
+                    barColor: '#4c4c4c',
+                    height: 20,
+                    colorMap: [
+                        'rgba(52, 152, 219, 1)',
+                        'rgba(52, 152, 219, 1)',
+                        'rgba(21,101,192, 1)',
+                        'rgb(103,58,183)',
+                        'rgba(0, 0 , 0, 1)',
+                        'rgba(255,238,88, 1)',
+                        'rgba(255,238,88, 1)',
+                        'rgb(255,152,0)',
+                        'rgb(255,152,0)',
+                        'rgba(255,152,0, 1)',
+                        'rgb(211,47,47)'
+                    ]
+                });
+
+                /* Heatamap */
+                $("#expression tbody td").not(":nth-child(1),:nth-child(2),:nth-child(3),:nth-child(4),:nth-child(5)").colorize();
+
+            }/*,
+            drawCallback: function () {
+                $("#expression tbody td").not(":nth-child(1),:nth-child(2),:nth-child(3),:nth-child(4),:nth-child(5)").colorize();
+               // alert("test");
+            }*/
+    } );
+
+        /* Heatmap */
+        /*$("#expression tbody td").not(":nth-child(1),:nth-child(2),:nth-child(3),:nth-child(4),:nth-child(5)").colorize();*/
+
+
+        // Filter event handler
+        $( table.table().container() ).on( 'keyup', 'tfoot input', function () {
+            table
+                .column( $(this).data('index') )
+                .search( this.value )
+                .draw();
+        } );
+    } );
+</script>
+
+<!-- ChartJS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
+<script>
+/*
+https://stackoverflow.com/questions/39141266/chartjs-in-datatable-cell-performance
+https://stackoverflow.com/questions/7407111/detect-page-change-on-datatable
+https://stackoverflow.com/questions/16083455/select-appropriate-tr-in-table-jquery
+ */
+    $('#expression').on('draw.dt', function() {
+        // chart.js - looks great, but can't it to initialize
+        // This will get called when data table data gets redrawn to the      table.
+
+        /*
+        var table = document.querySelector('#expression>tbody>tr[role="row"]')
+                console.log(table);
+                var tableArr = [];
+                var tableLab = [];
+
+                //loop all rows and form data array
+                for ( var i = 1; i < table.rows.length; i++ ) {
+                    tableArr.push([
+                        table.rows[i].cells[11].innerHTML,
+                        table.rows[i].cells[12].innerHTML,
+                        table.rows[i].cells[13].innerHTML,
+                        table.rows[i].cells[14].innerHTML,
+                        table.rows[i].cells[15].innerHTML,
+                        table.rows[i].cells[16].innerHTML,
+                        table.rows[i].cells[17].innerHTML,
+                        table.rows[i].cells[18].innerHTML,
+                        table.rows[i].cells[19].innerHTML,
+                        table.rows[i].cells[20].innerHTML,
+                        table.rows[i].cells[21].innerHTML
+                    ]);
+                    tableLab.push(table.rows[i].cells[0].innerHTML)
+                    var canvas = document.createElement("canvas");
+                    canvas.setAttribute("id", "myChart"+i);
+                    table.rows[i].cells[5].appendChild(canvas);
+                }
+                console.log(tableArr);
+                /*
+                        //loop array of data and create chart for each row
+                        tableArr.forEach(function(e,i){
+                            var chartID = "myChart"+ (i+1)
+                            var ctx = document.getElementById(chartID).getContext('2d');
+                            var myChart = new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                    labels: ["", "", "", "", "", "", "", "", "", "", ""],
+                                    datasets: [{
+                                        label: tableLab[i],
+                                        data: e,
+                                        backgroundColor: [
+                                            'rgba(52, 152, 219, 1)',
+                                            'rgba(52, 152, 219, 1)',
+                                            'rgba(21,101,192, 1)',
+                                            'rgba(21,101,192, 1)',
+                                            'rgba(0, 0 , 0, 1)',
+                                            'rgba(255,238,88, 1)',
+                                            'rgba(255,238,88, 1)',
+                                            'rgba(255,238,88, 1)',
+                                            'rgba(255,238,88, 1)',
+                                            'rgba(255,152,0, 1)',
+                                            'rgba(255,152,0, 1)'
+                                        ],
+                                        /!*borderColor: [
+                                            'rgba(255,99,132,1)',
+                                            'rgba(54, 162, 235, 1)',
+                                            'rgba(255, 206, 86, 1)',
+                                            'rgba(75, 192, 192, 1)'
+                                        ],*!/
+                                        borderColor: 'rgba(0, 0 , 0, 1)',
+                                        borderWidth: 1
+                                    }]
+                                },
+                                options: {
+                                    legend: {
+                                        display: false //This will do the task
+                                    },
+                                    barShowLabels: false,
+                                    scales: {
+                                        yAxes: [{
+                                            ticks: {
+                                                display: false
+                                            },
+                                            gridLines: {
+                                                display:false
+                                            }
+                                        }],
+                                        xAxes: [{
+                                            categoryPercentage: 1,
+                                            barPercentage: 1.01,
+                                            gridLines: {
+                                                display:false
+                                            }
+                                        }]
+                                    }
+                                }
+                            });
+                        })*/
+
+    });
+</script>
+</html>
