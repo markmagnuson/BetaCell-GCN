@@ -1,3 +1,7 @@
+2021/03/01 - This page is outdated. Refer to index.html instead.
+
+---
+
 This page is associated with the following publication - please cite accordingly:
 
 > Manuscript in preparation or in review
